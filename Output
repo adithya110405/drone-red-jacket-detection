@@ -1,1 +1,13 @@
+## 🔹 Output / Results
+
+- The system successfully detected persons in the input drone video using **YOLOv4-Tiny**.  
+- For persons wearing **red jackets**, the torso region exceeded the red pixel threshold → labeled as **“ALERT: Red Jacket”**.  
+- Other persons were labeled as **“Person”**.  
+- Bounding boxes were drawn in **red** for alerts and **green** for normal detections.  
+- The final processed video was saved as **`output_red_jacket.mp4`**.  
+
+✅ **Observations:**  
+- Robust detection even with varying lighting conditions.  
+- False positives reduced by combining **YOLOv4-Tiny person detection** + **HSV color filtering**.  
+- Real-time capable on CPU for standard video input.  
 
